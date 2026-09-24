@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}Result{% endblock %}
+
+{% block content %}
+    <h1>Result</h1>
+    {% if total is not None %}
+        <h2>The sum is: {{ total }}</h2>
+    {% else %}
+        <p>No data submitted.</p>
+    {% endif %}
+    <a href="{% url 'home' %}">Back to Home</a>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <h1>Welcome to the Home Page</h1>
+
+    <form action="{% url 'result' %}" method="POST">
+        {% csrf_token %}
+        <label for="num1">Number 1:</label>
+        <input type="number" name="num1" id="num1" required>
+        <label for="num2">Number 2:</label>
+        <input type="number" name="num2" id="num2" required>
+        <button type="submit">Submit</button>
+    </form>
+{% endblock %}
